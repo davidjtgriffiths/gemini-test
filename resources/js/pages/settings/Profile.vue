@@ -39,7 +39,7 @@ const user = page.props.auth.user;
         <SettingsLayout>
             <div class="flex flex-col space-y-6">
                 <HeadingSmall
-                    title="Profile information"
+                    title="Your Information"
                     description="Update your name and email address"
                 />
 
@@ -60,6 +60,19 @@ const user = page.props.auth.user;
                             placeholder="Full name"
                         />
                         <InputError class="mt-2" :message="errors.name" />
+                    </div>
+
+                    <div class="grid gap-2">
+                        <Label for="job">Job</Label>
+                        <Input
+                            id="job"
+                            class="mt-1 block w-full"
+                            name="job"
+                            :default-value="user.job"
+                            autocomplete="organization-title"
+                            placeholder="Job title"
+                        />
+                        <InputError class="mt-2" :message="errors.job" />
                     </div>
 
                     <div class="grid gap-2">
