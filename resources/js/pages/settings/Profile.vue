@@ -39,7 +39,7 @@ const user = page.props.auth.user;
         <SettingsLayout>
             <div class="flex flex-col space-y-6">
                 <HeadingSmall
-                    title="Profile information!"
+                    title="Your Information"
                     description="Update your name and email address"
                 />
 
